@@ -3,4 +3,12 @@
     margin: 0;
     padding: 0;
 }
-@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css'
+
+body {
+    font-family: Roboto, sans-serif;
+}
+@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+
+.mat-grid-tile {
+    background-color: #d7f0ff;
+}
