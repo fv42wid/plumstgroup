@@ -13,13 +13,15 @@ import { ContactComponent } from './contact/contact.component';
 import { MessageService } from './data-services/message-service.service';
 
 import { routing } from './app.routes';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ServicesComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
