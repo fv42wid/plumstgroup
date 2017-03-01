@@ -1,11 +1,40 @@
 <div fxFlex="70%" fxFlexOffset="20%">
   <h1>Contact Us</h1>
-  <form>
+  <form (ngSubmit)="createMessage(message)" #messageForm="ngForm">
     <div fxLayout="row">
       <div fxFlex="100%">
-    <md-input-container class="note-input">
-      <textarea mdInput name="note" rows="5" placeholder="Send us a note"></textarea>
-    </md-input-container>
+        <md-input-container class="note-input">
+          <input mdInput type="email" name="email" placeholder="Email Address"  
+            id="email" required #email="ngModel"
+            [(ngModel)]="message.email">
+        </md-input-container>
+      </div>
+    </div>
+    <div fxLayout="row">
+      <div fxFlex="100%">
+        <md-input-container class="note-input">
+          <input mdInput type="text" name="fname" placeholder="First Name"  
+            id="fname" required #fname="ngModel"
+            [(ngModel)]="message.fname">
+        </md-input-container>
+      </div>
+    </div>
+    <div fxLayout="row">
+      <div fxFlex="100%">
+        <md-input-container class="note-input">
+          <input mdInput type="text" name="lname" placeholder="Last Name"  
+            id="lname" required #lname="ngModel"
+            [(ngModel)]="message.lname">
+        </md-input-container>
+      </div>
+    </div>
+    <div fxLayout="row">
+      <div fxFlex="100%">
+        <md-input-container class="note-input">
+          <textarea mdInput name="body" rows="5" placeholder="Send us a note"
+            id="body" required #body='ngModel'
+            [(ngModel)]="message.body"></textarea>
+        </md-input-container>
       </div>
     </div>
     <div fxLayout="row">

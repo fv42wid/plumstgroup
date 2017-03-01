@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { ServicesComponent } from './services/services.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+import { MessageService } from './data-services/message-service.service';
 
 import { routing } from './app.routes';
 
@@ -28,7 +29,7 @@ import { routing } from './app.routes';
     FlexLayoutModule,
     routing
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

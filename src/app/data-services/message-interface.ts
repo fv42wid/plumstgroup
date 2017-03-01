@@ -3,5 +3,5 @@ export interface Message {
     email: string;
     fname: string;
     lname: string;
-    message: string;
+    body: string;
 }
