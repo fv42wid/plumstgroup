@@ -11,6 +11,7 @@ import { Message } from '../data-services/message-interface';
 })
 export class ContactComponent implements OnInit {
   submitted: boolean = false;
+  completed: boolean = false;
   //message: Message = {email: '', fname: '', lname: '', body: ''};
   message: Message;
 
@@ -30,7 +31,10 @@ export class ContactComponent implements OnInit {
     this.submitted = true;
     this.messageService.createMessage(message)
       .subscribe(
-        data => { return true},
+        data => { 
+          this.completed = true;
+          return true;
+        },
         error => {
           console.log("Error saving message");
           return Observable.throw(error);
