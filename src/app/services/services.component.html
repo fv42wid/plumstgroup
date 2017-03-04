@@ -6,7 +6,7 @@
 
 <div fxLayout="row">
   <div fxFlex="70%" fxFlexOffset="20%">
-    <md-tab-group>
+    <md-tab-group [selectedIndex]="service">
       <md-tab label="Back End">
         <h3>Ruby on Rails</h3>
         <p>
@@ -34,6 +34,10 @@
         automated tests to confirm the usability of our apps.  This allows for faster 
         iterations and a better end product.  Better products, faster.  That's what we 
         provide.
+      </md-tab>
+      <md-tab label="Service">
+        Find out why our clients love working with us.  We don't rest until you are 
+        satisfied with your product.  
       </md-tab>
     </md-tab-group>
   </div>
