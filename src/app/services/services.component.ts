@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-services',
@@ -8,18 +9,18 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ServicesComponent implements OnInit {
   service: number = 1;
+  id: number;
+  sub: any;
 
   constructor(
     public route: ActivatedRoute
-  ) {
-    console.log('construct');
-    console.log(this.route.params['_value']['id']);
-  }
+  ) {}
 
   ngOnInit() {
-    this.service = this.route.params['_value']['id'];
     console.log('init');
-    console.log(this.route.params);
+    this.sub = this.route.params.subscribe(params => {
+      this.service = params['id'];
+    });
   }
 
 }
